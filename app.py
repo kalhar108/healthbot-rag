@@ -25,7 +25,9 @@ import wikipedia
 
 # Embedder & Reranker
 EMBED_MODEL_NAME = st.secrets.get("EMBED_MODEL_NAME") or os.getenv("EMBED_MODEL_NAME", "all-MiniLM-L6-v2")
-_embedder = SentenceTransformer(EMBED_MODEL_NAME)
+import torch
+_embedder = SentenceTransformer(EMBED_MODEL_NAME, device='cpu')
+torch.set_default_device('cpu')
 _reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
 
 def embed(texts):
