@@ -1,4 +1,4 @@
-anthropic>=0.37.0
+groq>=0.5.0
 pinecone-client>=5.0.0
 wikipedia>=1.4.0
 sentence-transformers>=3.0.0
@@ -10,4 +10,3 @@ streamlit>=1.37.0
 aiohttp>=3.9.5
 httpx>=0.27.0
 nest-asyncio>=1.6.0
-cross-encoder>=0.1.5
